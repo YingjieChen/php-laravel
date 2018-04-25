@@ -32,3 +32,17 @@ Route::prefix('user')->group(function(){
 		return view('user.info');
 	});
 });
+
+// 不是微信浏览器的时候
+Route::get('notweixin',function(){
+    return view('errors.notweixin');
+})->name('notweixin');
+
+Route::group(['middleware'=>['iswechatbrowser','islogin']],function(){
+    Route::get('/',function(){
+        return view('welcome');
+    });
+});
+
+Route::get('weixinauthore','WechatAPI@wxauthorize')->name('wxauthorize');
+Route::get('weixinauthored.php','WechatAPI@wxauthorized')->name('wxauthorized');
