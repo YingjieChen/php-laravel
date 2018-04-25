@@ -113,8 +113,19 @@
 	</body>
 	<script src="{{asset('/js/jquery.min.js')}}"></script> 
 	<script>
+		 window.onresize = window.onload = function () {
+		   var w = $(window).width();
+		   if(w<640){
+		     var size = 20*w/640;//640的时候
+		对应html的font-size为20，那么宽度为w是对应
+		的font-size可这么求
+		     $('html').css('fontSize',size+'px');
+		   }
+		 }
+		</script>
+	<script>
 		$(function(){
-
+			
 		});
 	</script>
 </html>
