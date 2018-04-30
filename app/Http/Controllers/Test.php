@@ -19,7 +19,13 @@ class Test extends Controller{
 	]);
 	}
 	public function shouquan(){
-
+		$user = \App\User::find(1);
+		// Creating a token without scopes...
+		$token = $user->createToken('Private 12')->accessToken;
+		echo "$token\n";
+		// Creating a token with scopes...
+		$token = $user->createToken('My Token', ['place-orders'])->accessToken;
+		echo "$token\n";
 	}
 	public function quxiaoshouquan(){
 

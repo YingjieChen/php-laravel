@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('test','Test@test');
+Route::get('test','Test@shouquan');
 Route::prefix('user')->group(function(){
 	Route::get('setskill',function(){
 		return view('user.setskill');

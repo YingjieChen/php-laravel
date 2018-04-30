@@ -26,8 +26,16 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 	// api 认证路由器
         Passport::routes();
-        //
+        // token 寿命
 	Passport::tokensExpireIn(now()->addDays(15));
 	Passport::refreshTokensExpireIn(now()->addDays(30));
+	// 开启隐式授权
+	//Passport::enableImplicitGrant();
+	/*	定义作用域
+		Passport::tokensCan([
+			'place-orders' => 'Place orders',
+			'check-status' => 'Check order status',
+		]);
+	*/
     }
 }
