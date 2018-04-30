@@ -11,7 +11,7 @@
 |
 */
 
-
+Route::get('test','Test@test');
 Route::prefix('user')->group(function(){
 	Route::get('setskill',function(){
 		return view('user.setskill');
@@ -46,3 +46,13 @@ Route::group(['middleware'=>['iswechatbrowser','islogin']],function(){
 
 Route::get('weixinauthore','WechatAPI@wxauthorize')->name('wxauthorize');
 Route::get('weixinauthored.php','WechatAPI@wxauthorized')->name('wxauthorized');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/auth/callback', function (\Illuminate\Http\Request $request){
+	echo $request->code;
+});    

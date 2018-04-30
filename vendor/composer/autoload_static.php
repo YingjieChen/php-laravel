@@ -397,6 +397,7 @@ class ComposerStaticInit02cb91293a20592676599f547d51b5ab
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\Curl' => __DIR__ . '/../..' . '/app/Http/Controllers/Curl.php',
+        'App\\Http\\Controllers\\Juhe' => __DIR__ . '/../..' . '/app/Http/Controllers/Juhe.php',
         'App\\Http\\Controllers\\Test' => __DIR__ . '/../..' . '/app/Http/Controllers/Test.php',
         'App\\Http\\Controllers\\WechatAPI' => __DIR__ . '/../..' . '/app/Http/Controllers/WechatAPI.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',

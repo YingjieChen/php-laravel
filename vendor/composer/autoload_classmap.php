@@ -14,6 +14,7 @@ return array(
     'App\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\Curl' => $baseDir . '/app/Http/Controllers/Curl.php',
+    'App\\Http\\Controllers\\Juhe' => $baseDir . '/app/Http/Controllers/Juhe.php',
     'App\\Http\\Controllers\\Test' => $baseDir . '/app/Http/Controllers/Test.php',
     'App\\Http\\Controllers\\WechatAPI' => $baseDir . '/app/Http/Controllers/WechatAPI.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',

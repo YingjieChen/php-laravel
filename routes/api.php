@@ -13,7 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+//设置了 auth:api 访问的时候需要设置 header {Accept:"application/json",Authorization:"Bearer $access_token"}
+Route::middleware('auth:api')->get('/user6', function (Request $request) {
 	return $request->user();
 });
 
@@ -22,4 +23,15 @@ Route::prefix('wechat')->group(function(){
 	Route::get('setmenu','WechatAPI@createMenu');
 	Route::get('getmenu','WechatAPI@getMenu');
 	Route::get('deletemenu','WechatAPI@deletemenu');
+});
+
+Route::get('/redirect', function (){
+	$query = http_build_query([
+		'client_id' => '12',
+		'redirect_uri' => 'http://192.168.10.10:8000/auth/callback',
+		'response_type' => 'code',
+		'scope' => '',
+	]);
+
+       	return redirect('http://192.168.10.10:8000/oauth/authorize?' . $query);
 });
